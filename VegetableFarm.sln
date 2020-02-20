@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VegetableFarm", "VegetableFarm\VegetableFarm.csproj", "{9499CB2D-1A31-4A0A-A4C3-BB88E0E32F27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9499CB2D-1A31-4A0A-A4C3-BB88E0E32F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9499CB2D-1A31-4A0A-A4C3-BB88E0E32F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9499CB2D-1A31-4A0A-A4C3-BB88E0E32F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9499CB2D-1A31-4A0A-A4C3-BB88E0E32F27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E03D15EF-D5F9-47A0-ABB3-75B9EB2A3FB2}
+	EndGlobalSection
+EndGlobal
