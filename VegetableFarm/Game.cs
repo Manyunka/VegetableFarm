@@ -40,6 +40,20 @@ namespace VegetableFarm
 			return true;
 		}
 
+		public void NewGame()
+		{
+			Money = 50;
+			Speed = 1;
+			Time = new TimeSpan();
+
+			foreach (CheckBox cb in Field.Keys)
+			{
+				Field[cb].state = CellState.Empty;
+				UpdateBox(cb);
+				cb.Checked = false;
+			}
+		}
+
 		public void SetField(Panel panel)
 		{
 			foreach (CheckBox cb in panel.Controls)
@@ -48,7 +62,7 @@ namespace VegetableFarm
 
 		public void UpSpeed()
 		{
-			if (Speed < 3) Speed += speedStep;
+			if (Speed < 5) Speed += speedStep;
 		}
 
 		public void DownSpeed()
@@ -61,7 +75,18 @@ namespace VegetableFarm
 			Time = Time.Add(new TimeSpan(0, 0, 1));
 		}
 
-		public void Plant(CheckBox cb)
+		public void ChangeCell(CheckBox cb)
+		{
+			if (cb.Checked)
+				Plant(cb);
+			else if (Field[cb].state == CellState.Overgrow ||
+				Field[cb].state == CellState.Mature ||
+				Field[cb].state == CellState.Immature)
+				Harvest(cb);
+			else cb.Checked = true;
+		}
+
+		private void Plant(CheckBox cb)
 		{
 			if (Money >= 2)
 			{
@@ -73,7 +98,7 @@ namespace VegetableFarm
 			else cb.Checked = false;
 		}
 
-		public void Harvest(CheckBox cb)
+		private void Harvest(CheckBox cb)
 		{
 			if (Field[cb].state != CellState.Overgrow || Money >= 1)
 			{
